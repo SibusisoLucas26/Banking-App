@@ -1,0 +1,23 @@
+
+
+.navbar-light .navbar-brand
+{
+  color: coral;
+}
+.bg-light
+{
+  background-color: #363a3e !important;
+}
+.navbar-expand-lg .navbar-collapse{
+    background-color: rgba(107, 104, 99, 0.719);
+}
+.navbar-light .navbar-nav .nav-link
+{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body{background-color: #343a40;}
+
+.jumbotron-fluid{
+    background-color: #8c5f36 !important;
+}
