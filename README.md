@@ -13,7 +13,7 @@ Clone the Repository
 
 bash
 
-git clone https://github.com/your-username/universal-banking-app.git
+git clone https://github.com/SibusisoLucas26/universal-banking-app.git
 cd universal-banking-app
 
 Configure the Database
