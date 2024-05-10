@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -13,7 +13,7 @@
 <div class="container">
     <h2>Login</h2>
 
-    <form action="/submit" method="post" th:object="${user}">
+    <form th:action="@{/login}" method="post" th:object="${user}">
         <div class="form-group">
             <label for="username">Username:</label>
             <!-- Use th:field to bind the input field to the corresponding UserLoginRequest property -->

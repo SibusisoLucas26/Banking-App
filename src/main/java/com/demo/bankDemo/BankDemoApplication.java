@@ -9,11 +9,13 @@ import com.demo.bankDemo.Model.User;
 import com.demo.bankDemo.Repo.UserRepository;
 
 @SpringBootApplication
+
 // @ComponentScan(basePackages = "com.demo")
-public class BankDemoApplication implements CommandLineRunner {
+public class  BankDemoApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BankDemoApplication.class, args);
+		
 	}
 
 	@Autowired
@@ -22,13 +24,9 @@ public class BankDemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-
-		User user1 = new User("sibusiso","pass",769,456000);
-		userRepository.save(user1);
-
-		
-
-		
+			
+	//	User user1 = new User("Sibusiso", "Lucas", "Mabura","pass");
+	//	userRepository.save(user1);
 
 		// TODO Auto-generated method stub
 		// throw new UnsupportedOperationException("Unimplemented method 'run'");

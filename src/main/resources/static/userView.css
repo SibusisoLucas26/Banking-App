@@ -1,11 +1,16 @@
 body {
 	background-color: #343a40; /* Light gray background */
-	color: #343a40; /* Dark text color */
+	color: #343a40; 
+	font: icon;
+	font-size: large;
+	font-variant: all-small-caps;
+	/* Dark text color */
 }
 
 .container {
 	max-width: 800px; /* Set a maximum width for the container */
 	margin-left: auto;
+	box-sizing: initial;
 }
 
 h1 {
@@ -24,11 +29,25 @@ h5{color: #ff7b00;}
 .card:hover {
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly larger box shadow on hover */
 }
-
-.card-title {
-	color: #ecc208da; /* Bootstrap primary color for card titles */
-}
-
+/*cards-text colors*/
 .card-text {
-	color: #fdfdfdde; /* Dark text color for card content */
+	color: #c5e3ff; /* Dark text color for card content */
 }
+.table {
+        color: #c5e3ff;
+  }
+/*************/
+.btn-edit{
+	background-color: rgb(6, 199, 141);
+}
+.col-md-6 {
+    
+    flex: auto;
+    max-width: none;
+	margin-bottom: 40px;;
+  }
+
+  
+
+
+

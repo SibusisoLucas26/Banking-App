@@ -8,3 +8,12 @@ body{
     max-width: 500px;
     
   }
+
+.col-md-6 {
+    
+    flex: auto;
+    max-width: none;
+  }
+  .table {
+        color: #c5e3ff;
+  }
