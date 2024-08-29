@@ -2,22 +2,70 @@
 
 .navbar-light .navbar-brand
 {
-  color: coral;
-}
-.bg-light
-{
-  background-color: #363a3e !important;
-}
-.navbar-expand-lg .navbar-collapse{
-    background-color: rgba(107, 104, 99, 0.719);
-}
-.navbar-light .navbar-nav .nav-link
-{
-  color: rgba(255, 255, 255, 0.8);
+  color: #ff5400bd;  
 }
 
-body{background-color: #343a40;}
+.navbar-light .navbar-toggler{
+  background-color: #df723c;
+}
+
+.bg-light{
+  background-color: #15222fd8 !important;
+}
+
+.navbar-expand-lg .navbar-collapse{
+    background-color: rgba(107, 104, 99, 0);
+}
+
+
+.navbar-light .navbar-nav .nav-link{
+  color: rgba(43, 45, 75, 0.733);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(210, 191, 191, 0.73);
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: rgba(255, 108, 0, 0.9);
+}
+
+
+body{
+  background-color: #1b252f9c;
+  background-blend-mode: multiply;
+  background-image: url('/city.jpg');
+  background-repeat: round;
+}
 
 .jumbotron-fluid{
-    background-color: #8c5f36 !important;
+    background-blend-mode: multiply;
+    background-color: #36777700;
+    background-repeat: round;
+    color: #ff5500a2;
+}
+
+.display-4{
+  color: #ff5400bd;
+}
+
+.btn-primary {
+  color: #fb7e10;
+  background-color: #222a33;
+  border-color: #ff6c00;
+}
+
+.mt-5, .my-5 {
+  margin-top: 3rem !important;
+  color: #df7f38;
+}
+
+.card{
+  border-radius: .25rem;
+  background-color: #1e2b37;
+}
+.bg-dark {
+  background-color: #12223161 !important;
+}
+.text-center{
+  color: #ff5500e3;
 }

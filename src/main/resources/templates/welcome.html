@@ -1,103 +1,115 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>User Page</title>
+    <title>Welcome Page</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="userView.css">
 </head>
+
 <body>
 
-<div class="container mt-5">
-    <h1 class="mb-4">Universal Banking</h1>
+    <div class="container mt-5">
+        <h1 class="mb-4">Universal Banking</h1>
 
-    <!-- Account Information -->
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Account Information</h5>
-                    <p class="card-text">
-                        <strong>Account Holder:</strong> <span th:text="${user.firstname + ',' + user.lastname + ',' + user.username }"></span><br>
-                        <strong>Account Balance: R</strong> <span th:text="${user.balance}"></span>
-                        <br>Account Number:</strong> <span th:text="${user.accountNumber}"></span>
-                    </p>
+        <!-- Account Information -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Account Information</h5>
+                        <p class="card-text">
+                            <strong>Account Holder:</strong> <span
+                                th:text="${user.firstname + ', ' + user.lastname + ', ' + user.username}"></span><br>
+                            <strong>Account Balance: R</strong> <span th:text="${user.balance}"></span><br>
+                            <strong>Account Number:</strong> <span th:text="${user.accountNumber}"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transaction History -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Transaction History</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Add rows for transaction history -->
+                                <tr>
+                                    <td>2023-01-28</td>
+                                    <td>Electricity-bill</td>
+                                    <td>-R5000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2022-02-28</td>
+                                    <td>Internet-bill</td>
+                                    <td>-R1000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2021-03-28</td>
+                                    <td>Deposit</td>
+                                    <td>-R10000.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-<br>
-<br>
-        <!-- Transaction History -->
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Transaction History</h5>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Type</th>
-                                <th>Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Add rows for transaction history -->
-                             <tr><td>2023-01-28</td><td>Electricity-bill</td><td>-R5000.00</td></tr>
-                             <tr><td>2022-02-28</td><td>Internet-bill</td><td>-R1000.00</td></tr>
-                             <tr><td>2021-03-28</td><td>Deposit</td><td>-R10000.00</td></tr>
-                        </tbody>
-                    </table>
+
+        <!-- Transaction Form -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Make a Transaction</h5>
+                        <a href="/transfer" class="btn btn-edit">Transfer</a>
+                        <a href="/frontend/airtime" class="btn btn-edit">Buy Airtime</a>
+                        <a href="/pay-bills" class="btn btn-edit">Pay Bills</a>
+                        <a href="/frontend/lotto" class="btn btn-edit">Play Lotto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logout Button -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <a th:href="@{/logout}" class="btn btn-danger">Logout</a>
+                        <a th:href="@{/edit}" class="btn btn-edit">Edit Profile</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Transaction Form -->
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Make a Transaction</h5>
-                    <a th:href="@{/transfer}" class="btn btn-edit">transfer</a>
-                    <a th:href="@{/airtime}" class="btn btn-edit">Buy airtime</a>
-                    <a th:href="@{/pay}" class="btn btn-edit">Pay bills</a>
-                    <a th:href="@{/lotto}" class="btn btn-edit">Play lotto</a>
-                    <!-- Add a form for making transactions -->
-                    <!-- Example: <form th:action="@{/transaction}" method="post"> ... </form> -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Logout Button -->
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <a th:href="@{/logout}" class="btn btn-danger">Logout</a>
-                    <a th:href="@{/edit}" class="btn btn-edit">Edit Profile</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
 </body>
-</html>
 
+</html>

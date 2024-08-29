@@ -1,7 +1,5 @@
 package com.demo.bankDemo.Model;
 
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,9 +7,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
-@Table(name = "Bank_Users")
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Getter
+@Setter
+@Table(name = "Bank")
 public class User {
 
     @Id
@@ -24,9 +32,9 @@ public class User {
     @Column(nullable = false, name = "LASTNAME")
     private String lastname;
 
-    @Column(unique = true, nullable = false, name = "USERNAME" )
+    @Column(unique = true, nullable = false, name = "USERNAME")
     private String username;
-    
+
     @Column(nullable = false, name = "PASSWORD")
     private String password;
 
@@ -36,74 +44,7 @@ public class User {
     @Column(name = "BALANCE")
     private long balance = 5000000;
 
-    ///////////////////////////////////////////////////////////////
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public long getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(long accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public long getBalance() {
-        return balance;
-    }
-
-    public void setBalance(long balance) {
-        this.balance = balance;
-    }
     //////////////////////////////////////////////////////////
-
-    public User(String firstname, String lastname, String username, String password, long accountNumber, long balance) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.username = username;
-        this.password = password;
-        this.accountNumber = accountNumber;
-        this.balance = balance;
-    }
-
-    /////////////////////////////////////////////////
 
     public User(String firstname, String lastname, String username, String password) {
         this.firstname = firstname;
@@ -122,22 +63,10 @@ public class User {
         this.balance = balance;
     }
 
-    public User() {
-        //TODO Auto-generated constructor stub
-    }
-
     @PrePersist
     public void generateAccountNumber() {
         // Generate an 8-digit random account number
         this.accountNumber = (long) (Math.random() * 90000000L) + 10000000L;
     }
 
-    @Override
-    public String toString() {
-        return "User [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", username=" + username
-                + ", password=" + password + ", accountNumber=" + accountNumber + ", balance=" + balance + "]";
-    }
-
-    }
-        
-       
+}

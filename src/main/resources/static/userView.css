@@ -1,10 +1,14 @@
 body {
-	background-color: #343a40; /* Light gray background */
-	color: #343a40; 
+	
+	background-color: #171a1e; 
 	font: icon;
 	font-size: large;
 	font-variant: all-small-caps;
-	/* Dark text color */
+	/* Dark text color
+	
+	background-blend-mode: multiply;
+	background-image: url('/city.jpg');
+	background-repeat: round; */
 }
 
 .container {
@@ -23,7 +27,7 @@ h5{color: #ff7b00;}
 	border-radius: 10px; /* Rounded corners */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.918); /* Subtle box shadow */
 	transition: box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
-	background-color: #776b2ce3;
+	background-color: #2452598c;
 }
 
 .card:hover {
@@ -31,10 +35,10 @@ h5{color: #ff7b00;}
 }
 /*cards-text colors*/
 .card-text {
-	color: #c5e3ff; /* Dark text color for card content */
+	color: #ffffff; /* Dark text color for card content */
 }
 .table {
-        color: #c5e3ff;
+        color: #ffffff;
   }
 /*************/
 .btn-edit{

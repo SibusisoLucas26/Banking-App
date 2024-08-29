@@ -5,12 +5,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.demo.bankDemo.Model.User;
 import com.demo.bankDemo.Repo.UserRepository;
 
 @SpringBootApplication
 
-// @ComponentScan(basePackages = "com.demo")
 public class  BankDemoApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {

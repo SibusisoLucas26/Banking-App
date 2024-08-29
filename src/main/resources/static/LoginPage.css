@@ -1,5 +1,8 @@
 body{
-    background-color:#343a40 ;
+  background-color: #1b252f9c;
+  background-blend-mode: multiply;
+  background-image: url('/city.jpg');
+  background-repeat: round;
     color: #ea612c ;
 }
 

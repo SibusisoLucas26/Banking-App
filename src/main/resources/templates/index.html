@@ -1,98 +1,167 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Banking App</title>
-    
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
 
+    <!-- Font Awesome CSS for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
+    <div id="root"></div>
+    <script src="/static/frontend/src/index.js"></script>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h1 class="navbar-brand">Universal Banking</h1>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Universal Bank</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-<!-- Hero Section -->
-<div class="jumbotron jumbotron-fluid">
-    <div class="container text-center">
-        <h1 class="display-4">Welcome to our Banking App</h1>
-        <p class="lead">Experience modern and secure banking services at your fingertips.</p>
-        <a class="btn btn-primary btn-lg" th:href="@{/login}" role="button">Login</a>
-        <a class="btn btn-primary btn-lg" th:href="@{/register}" role="button">Register</a>
+    <!-- Hero Section -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1 class="display-4">Welcome to our Banking App</h1>
+            <p class="lead">Experience modern and secure banking services at your fingertips.</p>
+            <a class="btn btn-primary btn-lg" th:href="@{/login}" role="button">Login</a>
+            <a class="btn btn-primary btn-lg" th:href="@{/register}" role="button">Register</a>
+        </div>
     </div>
-</div>
 
-<!-- Features Section -->
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <img src="b5.jpeg" class="card-img-top" alt="Feature Image">
-                <div class="card-body">
-                    <h5 class="card-title">Online Banking</h5>
-                    <p class="card-text">Manage your accounts online, anytime, anywhere.</p>
+
+    <!-- Features Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="b5.jpeg" class="card-img-top" alt="Feature Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Online Banking</h5>
+                        <p class="card-text">Manage your accounts online, anytime, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="b7.jpeg" class="card-img-top" alt="Feature Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Secure Transactions</h5>
+                        <p class="card-text">Enjoy secure and encrypted transactions for peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="ob5s.jpeg" class="card-img-top" alt="Feature Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobile Banking</h5>
+                        <p class="card-text">Access your accounts on the go with our mobile banking app.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="b7.jpeg" class="card-img-top" alt="Feature Image">
-                <div class="card-body">
-                    <h5 class="card-title">Secure Transactions</h5>
-                    <p class="card-text">Enjoy secure and encrypted transactions for peace of mind.</p>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="container mt-5">
+        <div class="text-center mb-5">
+            <h2>What Our Customers Say</h2>
+            <p class="lead">Hear from our happy customers.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"Universal Bank has transformed the way I manage my finances. The online
+                            banking features are fantastic!"</p>
+                        <p class="card-text"><strong>- John Doe</strong></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="ob5s.jpeg " class="card-img-top" alt="Feature Image">
-                <div class="card-body">
-                    <h5 class="card-title">Mobile Banking</h5>
-                    <p class="card-text">Access your accounts on the go with our mobile banking app.</p>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"I feel secure using Universal Bank's services. Their customer support is
+                            excellent!"</p>
+                        <p class="card-text"><strong>- Jane Smith</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"The mobile app is user-friendly and allows me to manage my accounts on the
+                            go."</p>
+                        <p class="card-text"><strong>- Robert Johnson</strong></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!-- Footer Section -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Universal Bank</h5>
+                    <p>
+                        Your trusted partner in financial services. Connect with us on social media for the latest
+                        updates.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-center">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <a href="https://www.facebook.com" class="btn btn-primary btn-lg m-1" role="button"
+                        aria-pressed="true"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" class="btn btn-primary btn-lg m-1" role="button"
+                        aria-pressed="true"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.whatsapp.com" class="btn btn-primary btn-lg m-1" role="button"
+                        aria-pressed="true"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Universal Bank
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
 </body>
+
 </html>
